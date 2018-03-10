@@ -18,10 +18,13 @@ public class Mission {
             case 1:
                 this.name = "Smok wawelski";
                 this.missionDescription = "Poznaj legendę o smoku";
-                this.tasks.add(new MissionTask("Odnajdź kryjówkę smoka wawelskiego",
-                        50.053151, 19.933751, MissionTask.TaskType.SEARCH));
-                this.tasks.add(new MissionTask("Odnajdź posąg",
-                        50.053030,19.933586, MissionTask.TaskType.SEARCH));
+                MissionTask m1 = new MissionTask("Odnajdź kryjówkę smoka wawelskiego",
+                        50.053151, 19.933751, MissionTask.TaskType.SEARCH);
+                this.tasks.add(m1);
+                //this.tasks.add(new MissionTask("Odnajdź kryjówkę smoka wawelskiego",
+                //        50.053151, 19.933751, MissionTask.TaskType.SEARCH));
+                //this.tasks.add(new MissionTask("Odnajdź posąg",
+                //        50.053030,19.933586, MissionTask.TaskType.SEARCH));
 
             case 2:
                 this.name = "Legendarny skarb";
