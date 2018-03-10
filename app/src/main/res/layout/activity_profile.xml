@@ -26,6 +26,7 @@ tools:layout_editor_absoluteY="81dp">
         android:layout_width="129dp"
         android:layout_height="65dp"
         android:text="Ranking"
+        android:onClick="JumpTo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="128dp"
         tools:layout_editor_absoluteY="170dp" />
@@ -35,6 +36,7 @@ tools:layout_editor_absoluteY="81dp">
         android:layout_width="129dp"
         android:layout_height="55dp"
         android:text="Osiągnięcia"
+        android:onClick="JumpTo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="128dp"
         tools:layout_editor_absoluteY="256dp" />
@@ -44,6 +46,7 @@ tools:layout_editor_absoluteY="81dp">
         android:layout_width="129dp"
         android:layout_height="55dp"
         android:text="ścieżka kariery"
+        android:onClick="JumpTo"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="128dp"
         tools:layout_editor_absoluteY="334dp" />
@@ -54,7 +57,8 @@ tools:layout_editor_absoluteY="81dp">
         android:layout_width="348dp"
         android:layout_height="15dp"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="93dp" />
+        tools:layout_editor_absoluteY="93dp"
+        tools:ignore="MissingConstraints" />
 
 
 </android.support.constraint.ConstraintLayout>

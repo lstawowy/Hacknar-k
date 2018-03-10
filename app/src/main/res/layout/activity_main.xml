@@ -16,31 +16,38 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="25dp" />
+        tools:layout_editor_absoluteY="25dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="129dp"
         android:layout_height="65dp"
         android:text="Start"
+        android:onClick="JumpTo"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="163dp" />
+        tools:layout_editor_absoluteY="163dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="129dp"
         android:layout_height="55dp"
         android:text="Profil"
+        android:onClick="JumpTo"
         tools:layout_editor_absoluteX="92dp"
-        tools:layout_editor_absoluteY="247dp" />
+        tools:layout_editor_absoluteY="247dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="127dp"
         android:layout_height="58dp"
         android:text="Ranking"
+        android:onClick="JumpTo"
         tools:layout_editor_absoluteX="93dp"
-        tools:layout_editor_absoluteY="321dp" />
+        tools:layout_editor_absoluteY="321dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/imageButton2"
@@ -48,7 +55,8 @@
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/ic_menu_preferences"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="443dp" />
+        tools:layout_editor_absoluteY="443dp"
+        tools:ignore="MissingConstraints" />
 
     <ImageButton
         android:id="@+id/imageButton3"
@@ -56,6 +64,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@android:drawable/btn_dialog"
         tools:layout_editor_absoluteX="312dp"
-        tools:layout_editor_absoluteY="443dp" />
+        tools:layout_editor_absoluteY="443dp"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>
