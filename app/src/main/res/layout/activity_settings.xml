@@ -8,46 +8,55 @@
     tools:layout_editor_absoluteY="81dp">
 
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="232dp"
         android:layout_height="81dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginTop="20dp"
         android:allowUndo="false"
         android:text="Naostrz swój topór, wybierz czym chcesz walczyć."
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.894"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="15dp" />
 
     <ImageButton
         android:id="@+id/imageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:onClick="JumpTo"
-        app:srcCompat="@android:drawable/ic_menu_revert"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="16dp"
-        tools:ignore="MissingConstraints"
+        app:layout_constraintStart_toStartOf="parent"
 
-        />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="20dp" />
 
     <Switch
         android:id="@+id/switch1"
         android:layout_width="195dp"
         android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="100dp"
         android:text="Muzyka"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="164dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="80dp" />
 
     <Switch
         android:id="@+id/switch2"
         android:layout_width="195dp"
         android:layout_height="45dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="15dp"
         android:text="Dubbing"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="233dp"
-        tools:ignore="MissingConstraints" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/switch1"
+        tools:ignore="MissingConstraints"
+        android:layout_marginLeft="80dp" />
 
 </android.support.constraint.ConstraintLayout>

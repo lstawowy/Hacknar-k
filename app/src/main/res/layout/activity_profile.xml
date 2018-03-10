@@ -10,46 +10,57 @@ tools:layout_editor_absoluteY="81dp">
     <TextView
         android:layout_width="137dp"
         android:layout_height="71dp"
+        android:layout_marginStart="8dp"
         android:allowUndo="false"
         android:text="Nazwa wikinga"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintHorizontal_bias="0.58"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.03" />
+        app:layout_constraintVertical_bias="0.032"
+        android:layout_marginLeft="8dp" />
 
     <Button
         android:id="@+id/button"
         android:layout_width="129dp"
         android:layout_height="65dp"
-        android:text="Ranking"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="80dp"
         android:onClick="JumpTo"
+        android:text="Ranking"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/progressBar"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="170dp" />
+        android:layout_marginLeft="120dp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="129dp"
         android:layout_height="55dp"
-        android:text="Osiągnięcia"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="15dp"
         android:onClick="JumpTo"
+        android:text="Osiągnięcia"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="256dp" />
+        android:layout_marginLeft="120dp" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="129dp"
         android:layout_height="55dp"
-        android:text="Ścieżka kariery"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="15dp"
         android:onClick="JumpTo"
+        android:text="Ścieżka kariery"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="128dp"
-        tools:layout_editor_absoluteY="334dp" />
+        android:layout_marginLeft="120dp" />
 
     <ProgressBar
         android:id="@+id/progressBar"
