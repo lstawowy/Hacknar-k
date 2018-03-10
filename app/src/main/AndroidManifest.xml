@@ -14,27 +14,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_activity_settings"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value="com.example.admin.hacknark.MainActivity" />
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.admin.hacknark.MainActivity" />
         </activity>
-
-
         <activity
             android:name=".Profile"
             android:label="@string/title_activity_profile"
@@ -44,8 +39,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.admin.hacknark.MainActivity" />
         </activity>
-
-
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_activity_login"
@@ -54,8 +47,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.admin.hacknark.MainActivity" />
         </activity>
-
-
         <activity
             android:name=".Register"
             android:label="@string/title_activity_register"
@@ -63,19 +54,17 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.admin.hacknark.Register" />
+                android:value="com.example.admin.hacknark.LoginActivity" />
         </activity>
-
-        <activity android:name=".Ranking"
+        <activity
+            android:name=".Ranking"
             android:label="@string/title_activity_profile"
             android:parentActivityName=".LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.admin.hacknark.Ranking" />
+                android:value="com.example.admin.hacknark.LoginActivity" />
         </activity>
-
-
         <activity
             android:name=".Achievements"
             android:label="@string/title_activity_achievements"
@@ -85,20 +74,15 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.admin.hacknark.Profile" />
         </activity>
-
         <activity
-            android:name=".CarrierPath"
-            android:label="CarrierPath"
-            android:parentActivityName=".Profile"
+            android:name=".Map"
+            android:label="@string/title_activity_map"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.admin.hacknark.Profile" />
+                android:value="com.example.admin.hacknark.MainActivity" />
         </activity>
-
-
-
-
     </application>
 
 </manifest>
