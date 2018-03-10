@@ -14,7 +14,12 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.ProtocolException;
+import java.net.SocketPermission;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
@@ -26,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         this.userIsLogged = false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        GameData.getInstance();
+        //GameData.getInstance();
     }
 
 
@@ -39,9 +44,14 @@ public class MainActivity extends AppCompatActivity {
         public String label;
 
         public void run(){
-
             String url = "https://hacknarock.release.commandcentral.com";
             URL obj = null;
+            DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd_HH:mm:ss");
+            Date date = new Date();
+            String acDate = dateFormat.format(date);
+            String actDate = acDate.replace('_','T');
+            String actualDate = actDate.concat(".000Z");
+            System.out.print(actualDate);
 
             try {
                 obj = new URL(url);
@@ -76,17 +86,18 @@ public class MainActivity extends AppCompatActivity {
                 js = new JSONObject("{\n" +
                         " \"metaHeader\":\n" +
                         " {\n" +
-                        "   \"metaTimeStamp\": \"2018-03-11T14:52:56.618Z\"\n" +
+                        "   \"metaTimeStamp\": \""+actualDate+"\"\n" +
                         " },\n" +
                         " \"eventHeader\":\n" +
                         " {\n" +
                         "   \"id\": \""+id+"\",\n" +
                         "   \"label\": \""+label+"\",\n" +
-                        "   \"timeStamp\": \"2018-03-10T14:52:56.618Z\",\n" +
+                        "   \"timeStamp\": \""+actualDate+"\",\n" +
                         "   \"location\": {\n" +
                         "     \"latitude\": "+latitude+",\n" +
                         "     \"longitude\": "+longitude+"\n" +
                         "   },\n" +
+                        "\"detailedDescription\": \"Officer John - found a homeless person taking drugs.\","+
                         "   \"icon\":\n" +
                         "   {\n" +
                         "     \"url\": \"http://dl.hiapphere.com/data/icon/201410/HiAppHere_com_kov.theme.domo.png\"\n" +
@@ -159,8 +170,8 @@ public class MainActivity extends AppCompatActivity {
         thread.latitude="50.9261";
         thread.longitude="19.9261";
         thread.priority="emergency";
-        thread.id="id";
-        thread.label="label";
+        thread.id="id1";
+        thread.label="label1";
         thread.start();
     }
 
