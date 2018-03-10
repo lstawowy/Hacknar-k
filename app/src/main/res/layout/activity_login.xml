@@ -70,6 +70,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:text="Zaloguj się"
+                android:onClick="JumpTo"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -79,5 +80,6 @@
         android:id="@+id/button4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="JumpTo"
         android:text="Nie masz konta?" />
 </LinearLayout>

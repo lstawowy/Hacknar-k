@@ -23,18 +23,18 @@ public class MainActivity extends AppCompatActivity {
         button_text =((Button)View).getText().toString();
         if(button_text.equals("Profil"))
         {
-            Intent jump = new Intent(this,Profile.class);
-            startActivity(jump);
+            if(userIsLogged) {
+                Intent jump = new Intent(this, Profile.class);
+                startActivity(jump);
+            }else{
+                Intent jump = new Intent(this, LoginActivity.class);
+                startActivity(jump);
+            }
+
         }else if(button_text.equals("Ranking")){
             Intent jump = new Intent(this,Profile.class);
             startActivity(jump);
         }
-/*        else if (button_text.equals("click third activity"))
-        {
-            Intent mass = new Intent(this,ThirdActivity.class);
-            startActivity(mass);
-
-        }*/
     }
 
 

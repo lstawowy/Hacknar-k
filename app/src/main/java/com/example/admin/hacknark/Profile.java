@@ -33,11 +33,14 @@ public class Profile extends AppCompatActivity {
     public void JumpTo(View View) {
         String button_text;
         button_text = ((Button) View).getText().toString();
-        if (button_text.equals("Profil")) {
-            Intent jump = new Intent(this, Profile.class);
+        if (button_text.equals("Ranking")) {
+            Intent jump = new Intent(this, Ranking.class);
             startActivity(jump);
-        } else if (button_text.equals("Ranking")) {
-            Intent jump = new Intent(this, Profile.class);
+        } else if (button_text.equals("Osiągnięcia")) {
+            Intent jump = new Intent(this, Achievements.class);
+            startActivity(jump);
+        }else if(button_text.equals("Ścieżka kariery")){
+            Intent jump = new Intent(this, CarrierPath.class);
             startActivity(jump);
         }
 
