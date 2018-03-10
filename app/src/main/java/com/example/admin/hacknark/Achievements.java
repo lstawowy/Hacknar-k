@@ -19,4 +19,8 @@ public class Achievements extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    public void JumpTo(View view){
+
+    }
+
 }
