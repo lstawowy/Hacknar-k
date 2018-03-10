@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
             }
 
         }else if(button_text.equals("Ranking")){
-            Intent jump = new Intent(this,Profile.class);
+            Intent jump = new Intent(this,Ranking.class);
             startActivity(jump);
         }
     }
