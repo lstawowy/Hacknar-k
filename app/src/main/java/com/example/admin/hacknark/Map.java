@@ -1,8 +1,6 @@
 package com.example.admin.hacknark;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -10,8 +8,6 @@ import android.view.View;
 import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -28,7 +24,7 @@ public class Map extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
-    public void createPUT(View view) throws IOException {
+    public void refreshPUT(View view) throws IOException {
 
         URL url = new URL("https://hacknarock.release.commandcentral.com/");
         HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();

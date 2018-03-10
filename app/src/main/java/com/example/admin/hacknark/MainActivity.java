@@ -1,12 +1,14 @@
 package com.example.admin.hacknark;
 
 import android.content.Intent;
+import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 import java.io.IOException;
+import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.net.HttpURLConnection;
 import java.net.URL;
@@ -14,7 +16,10 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.net.ssl.HttpsURLConnection;
+
 public class MainActivity extends AppCompatActivity {
+
 
     boolean userIsLogged;
 
@@ -26,24 +31,31 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createPUT(View view) throws IOException {
-
-        URL url = new URL("https://hacknarock.release.commandcentral.com/");
-        HttpURLConnection httpCon = (HttpURLConnection) url.openConnection();
-        httpCon.setRequestMethod("PUT");
-        httpCon.setDoOutput(true);
+        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
         String authorization = "Basic dmZWdHZnRVI2YjlvN3Zn";
         String contentType = "application/json";
+
+
+        HttpsURLConnection httpCon;
+        URL url = new URL("https://hacknarock.release.commandcentral.com/");
+        httpCon = (HttpsURLConnection) url.openConnection();
+        httpCon.setRequestMethod("PUT");
+        httpCon.setDoOutput(true);
+        httpCon.setDoInput(true);
         httpCon.setRequestProperty("Content-Type", contentType);
         httpCon.setRequestProperty("Authorization", authorization);
+        //System.out.println("Response Code : " + httpCon.getResponseCode());
+
 
         //Meta Header:
         String EventTypelabel = "Janusz";
 
         DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date date = new Date();
-        String actualDate = dateFormat.format(date);
+        //String actualDate = dateFormat.format(date);
 
-
+        String actualDate = "2018-03-10T15:00:00.000Z";
         //Event Header:
         String uniqueID = "oficer-janusz";
         String label = "Oficer Janusz";
@@ -55,16 +67,19 @@ public class MainActivity extends AppCompatActivity {
         String priority = "unknown";
 
 
-        OutputStreamWriter out = new OutputStreamWriter(httpCon.getOutputStream());
+        httpCon.connect();
+        String event1 = String.format("{}");
+        OutputStream os = httpCon.getOutputStream();
+        OutputStreamWriter out = new OutputStreamWriter(os,"UTF-8");
         String event = String.format("{" +
                 "  \"metaHeader\": {\n" +
-                "    \"metaTimeStamp\": \"" + actualDate + ".000Z\", \n" +
+                "    \"metaTimeStamp\": \"" + actualDate + "\", \n" +
                 "    \"metaEventTypeLabel\": \"" + EventTypelabel + "\"\n" +
                 "  },\n" +
                 "  \"eventHeader\": {\n" +
                 "    \"id\": \"" + uniqueID + "-1\",\n" +
                 "    \"label\": \"" + label + "\",\n" +
-                "    \"timeStamp\": \"" + actualDate + ".000Z\",\n" +
+                "    \"timeStamp\": \"" + actualDate + "\",\n" +
                 "    \"location\": {\n" +
                 "      \"latitude\": " + latitude + ",\n" +
                 "      \"longitude\": " + longitude + "\n" +
@@ -88,10 +103,12 @@ public class MainActivity extends AppCompatActivity {
                 "    ]\n" +
                 "  }\n" +
                 "};");
-        out.write(event);
-        System.out.println(event);
+
+
+        out.write(event1);
+        //System.out.println("Response Code : " + httpCon.getResponseCode());
+        //System.out.println(event);
         out.close();
-        httpCon.getInputStream();
 
     }
 
