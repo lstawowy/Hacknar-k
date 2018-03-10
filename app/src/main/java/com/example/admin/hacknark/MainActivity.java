@@ -42,6 +42,12 @@ public class MainActivity extends AppCompatActivity {
         public String priority;
         public String id;
         public String label;
+        public String icon;
+        public String description;
+        public String attachmentName;
+        public String attachmentContentType;
+        public String attachmentUrl;
+
 
         public void run(){
             String url = "https://hacknarock.release.commandcentral.com";
@@ -97,13 +103,21 @@ public class MainActivity extends AppCompatActivity {
                         "     \"latitude\": "+latitude+",\n" +
                         "     \"longitude\": "+longitude+"\n" +
                         "   },\n" +
-                        "\"detailedDescription\": \"Officer John - found a homeless person taking drugs.\","+
+                        "\"detailedDescription\": \""+description+"\","+
                         "   \"icon\":\n" +
                         "   {\n" +
-                        "     \"url\": \"http://dl.hiapphere.com/data/icon/201410/HiAppHere_com_kov.theme.domo.png\"\n" +
+                        "     \"url\": \"MsiIcon://"+icon+"\"\n" +
                         "   },\n" +
-                        "   \"expirationTimeStamp\": \"2018-03-12T14:52:56.618Z\",\n" +
-                        "   \"priority\": \""+priority+"\"\n" +
+                        "   \"expirationTimeStamp\": \"2018-03-11T02:52:56.618Z\",\n" +
+                        "   \"priority\": \""+priority+"\",\n" +
+                        "    \"attachments\": [\n" +
+                        "      {\n" +
+                        "        // Title of Attachment\n" +
+                        "        \"name\": \""+attachmentName+"\",\n" +
+                        "        \"contentType\": \""+attachmentContentType+"\",\n" +
+                        "        \"url\": \""+attachmentUrl+"\"\n" +
+                        "      }\n" +
+                        "    ]" +
                         " }\n" +
                         "}");
             } catch (JSONException e) {
@@ -169,9 +183,16 @@ public class MainActivity extends AppCompatActivity {
         PUTThread thread = new PUTThread();
         thread.latitude="50.9261";
         thread.longitude="19.9261";
+        //priorities = ['emergency' | 'high' | 'medium' | 'low' | 'diagnostic' | 'unknown']
         thread.priority="emergency";
-        thread.id="id1";
-        thread.label="label1";
+        thread.id="id6";
+        thread.label="label5";
+        //iconsAvailable https://codepen.io/anon/pen/LQodbY
+        thread.icon="ic_unit_police_sirens";
+        thread.description="jakis opis";
+        thread.attachmentName="Incident location";
+        thread.attachmentContentType="application/link";
+        thread.attachmentUrl="https://goo.gl/maps/Yiz4TLDBF3L2";
         thread.start();
     }
 
