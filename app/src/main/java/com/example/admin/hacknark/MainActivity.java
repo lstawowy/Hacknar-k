@@ -1,6 +1,7 @@
 package com.example.admin.hacknark;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -181,7 +182,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createPUT(View view) throws IOException, JSONException {
-        PUTThread thread = new PUTThread();
+        String mapURL = "https://inform.release.commandcentral.com/#/";
+        Uri webaddress = Uri.parse(mapURL);
+
+        Intent gotoMaps = new Intent(Intent.ACTION_VIEW, webaddress);
+        if (gotoMaps.resolveActivity(getPackageManager()) != null){
+            startActivity(gotoMaps);
+        }
+
+        //Dodawanie punktow na mapie
+        /*PUTThread thread = new PUTThread();
         thread.latitude="50.9261";
         thread.longitude="19.9261";
         //priorities = ['emergency' | 'high' | 'medium' | 'low' | 'diagnostic' | 'unknown']
@@ -195,6 +205,7 @@ public class MainActivity extends AppCompatActivity {
         thread.attachmentContentType="application/link";
         thread.attachmentUrl="https://goo.gl/maps/Yiz4TLDBF3L2";
         thread.start();
+    */
     }
 
 
