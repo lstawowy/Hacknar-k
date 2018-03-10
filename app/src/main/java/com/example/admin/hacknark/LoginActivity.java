@@ -3,6 +3,7 @@ package com.example.admin.hacknark;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -95,7 +96,15 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mProgressView = findViewById(R.id.login_progress);
     }
 
-    public void JumpTo(View view){
+    public void JumpTo(View View)
+    {
+        String button_text;
+        button_text =((Button)View).getText().toString();
+
+        if(button_text.equals("Nie masz konta?")) {
+            Intent jump = new Intent(this, Register.class);
+            startActivity(jump);
+        }
 
     }
 

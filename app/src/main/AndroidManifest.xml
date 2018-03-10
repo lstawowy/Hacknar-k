@@ -63,7 +63,7 @@
             android:theme="@style/AppTheme.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.admin.hacknark.LoginActivity" />
+                android:value="com.example.admin.hacknark.Register" />
         </activity>
 
         <activity android:name=".Ranking"
