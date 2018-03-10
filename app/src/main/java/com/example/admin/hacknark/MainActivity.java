@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
         this.userIsLogged = false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        GameData.getInstance();
     }
 
 
