@@ -89,4 +89,5 @@
         completions."
     </string>
     <string name="title_activity_achievements">Achievements</string>
+    <string name="title_activity_register">Register</string>
 </resources>
