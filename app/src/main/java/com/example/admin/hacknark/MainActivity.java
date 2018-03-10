@@ -19,8 +19,6 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
-    
-
     boolean userIsLogged;
 
     @Override
@@ -32,11 +30,13 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-
-
-
-
     public class PUTThread extends Thread {
+        public String latitude;
+        public String longitude;
+        public String priority;
+        public String id;
+        public String label;
+
         public void run(){
 
             String url = "https://hacknarock.release.commandcentral.com";
@@ -79,19 +79,19 @@ public class MainActivity extends AppCompatActivity {
                         " },\n" +
                         " \"eventHeader\":\n" +
                         " {\n" +
-                        "   \"id\": \"dev-bg\",\n" +
-                        "   \"label\": \"U1it\",\n" +
+                        "   \"id\": \""+id+"\",\n" +
+                        "   \"label\": \""+label+"\",\n" +
                         "   \"timeStamp\": \"2018-03-10T14:52:56.618Z\",\n" +
                         "   \"location\": {\n" +
-                        "     \"latitude\": 50.5514,\n" +
-                        "     \"longitude\": 19.9261\n" +
+                        "     \"latitude\": "+latitude+",\n" +
+                        "     \"longitude\": "+longitude+"\n" +
                         "   },\n" +
                         "   \"icon\":\n" +
                         "   {\n" +
                         "     \"url\": \"http://dl.hiapphere.com/data/icon/201410/HiAppHere_com_kov.theme.domo.png\"\n" +
                         "   },\n" +
                         "   \"expirationTimeStamp\": \"2018-03-12T14:52:56.618Z\",\n" +
-                        "   \"priority\": \"emergency\"\n" +
+                        "   \"priority\": \""+priority+"\"\n" +
                         " }\n" +
                         "}");
             } catch (JSONException e) {
@@ -154,7 +154,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createPUT(View view) throws IOException, JSONException {
-        (new PUTThread()).start();
+        PUTThread thread = new PUTThread();
+        thread.latitude="50.9261";
+        thread.longitude="19.9261";
+        thread.priority="emergency";
+        thread.id="id";
+        thread.label="label";
+        thread.start();
     }
 
 
