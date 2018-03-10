@@ -15,5 +15,6 @@
         android:onClick="createPUT"
         android:text="Button"
         tools:layout_editor_absoluteX="130dp"
-        tools:layout_editor_absoluteY="3dp" />
+        tools:layout_editor_absoluteY="3dp"
+        tools:ignore="MissingConstraints" />
 </android.support.constraint.ConstraintLayout>

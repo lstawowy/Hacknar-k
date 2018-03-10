@@ -20,9 +20,10 @@ public class MainActivity extends AppCompatActivity {
     public void JumpTo(View View)
     {
         String button_text;
+        String button_id;
         button_text =((Button)View).getText().toString();
-        if(button_text.equals("Profil"))
-        {
+
+        if(button_text.equals("Profil")){
             if(userIsLogged) {
                 Intent jump = new Intent(this, Profile.class);
                 startActivity(jump);
