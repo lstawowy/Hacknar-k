@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.admin.hacknark.SettingsActivity"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:layout_width="232dp"
+        android:layout_height="81dp"
+        android:layout_marginTop="16dp"
+        android:allowUndo="false"
+        android:text="Naostrz swój topór, wybierz czym chcesz walczyć."
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_revert"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp"
+        tools:ignore="MissingConstraints"
+
+        />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:text="Muzyka"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="164dp"
+        tools:ignore="MissingConstraints" />
+
+    <Switch
+        android:id="@+id/switch2"
+        android:layout_width="195dp"
+        android:layout_height="45dp"
+        android:text="Dubbing"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="233dp"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

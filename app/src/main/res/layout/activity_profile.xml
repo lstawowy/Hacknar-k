@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.admin.hacknark.Profile"
+tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:layout_width="137dp"
+        android:layout_height="71dp"
+        android:allowUndo="false"
+        android:text="Nazwa wikinga"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.78"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="129dp"
+        android:layout_height="65dp"
+        android:text="Ranking"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="129dp"
+        android:layout_height="55dp"
+        android:text="Osiągnięcia"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="129dp"
+        android:layout_height="55dp"
+        android:text="ścieżka kariery"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="128dp"
+        tools:layout_editor_absoluteY="334dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="348dp"
+        android:layout_height="15dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="93dp" />
+
+
+</android.support.constraint.ConstraintLayout>
