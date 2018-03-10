@@ -11,14 +11,8 @@ public class GameData {
     private static GameData instance;
     public ArrayList<GameMode> modes = new ArrayList<>();
 
-    private GameData(){
+    public GameData(){
         GameMode jeden = new GameMode(1);
-        this.instance.modes.add(jeden);
-    }
-    public static GameData getInstance(){
-        if (instance == null){
-            instance = new GameData();
-        }
-        return instance;
+        this.modes.add(jeden);
     }
 }

@@ -24,6 +24,7 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static GameData game;
     boolean userIsLogged;
 
     @Override
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
         this.userIsLogged = false;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //GameData.getInstance();
+        game = new GameData();
     }
 
 
