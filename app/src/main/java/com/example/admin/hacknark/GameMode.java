@@ -23,6 +23,7 @@ public class GameMode {
                 this.name = "Legendarny";
                 this.modeDescription = "Tryb skierowany dla najmłodszych graczy. Odkryj niezwykły świat krakowskich" +
                         "legend i daj się porwać przygodzie.";
+                GameData.NameToObjectMode.put(this.name,this);
         }
     }
 }

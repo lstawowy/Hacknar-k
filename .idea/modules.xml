@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/Hacknar-k.iml" filepath="$PROJECT_DIR$/Hacknar-k.iml" />
       <module fileurl="file://C:\Users\Admin\AndroidStudioProjects\Hacknark\Hacknar-k.iml" filepath="C:\Users\Admin\AndroidStudioProjects\Hacknark\Hacknar-k.iml" />
       <module fileurl="file://$PROJECT_DIR$/Hacknark.iml" filepath="$PROJECT_DIR$/Hacknark.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />

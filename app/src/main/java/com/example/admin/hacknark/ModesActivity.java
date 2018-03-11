@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 public class ModesActivity extends AppCompatActivity {
     public static String chosenMode;
+    public static String chosenMission;
 
     View.OnClickListener l = new View.OnClickListener() {
 
@@ -45,31 +46,7 @@ public class ModesActivity extends AppCompatActivity {
             b.setLeft(115);
             b.setOnClickListener(l);
             b.layout(115,80+MainActivity.game.modes.indexOf(g)*95,10,10);
-            //TextView v = (TextView) findViewById(R.id.textView);
             rLayout.addView(b);
         }
-
-
-/*        for(GameMode g:MainActivity.game.modes){
-            RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(
-                    RelativeLayout.LayoutParams.WRAP_CONTENT,
-                    RelativeLayout.LayoutParams.WRAP_CONTENT
-            );
-            RelativeLayout rLayout = (RelativeLayout) findViewById(R.id.textView);
-            Button tv1 =  new Button(this);
-            tv1.setText("Button");
-            tv1.setId(1);
-            tv1.setHeight(50);
-            tv1.setWidth(100);
-            rLayout.addView(tv1);
-
-            params.addRule(RelativeLayout.BELOW, R.id.textView1);
-            params.addRule(RelativeLayout.RIGHT_OF, R.id.textView1);
-
-// left, top, right, bottom to wartosci marginesow w pikselach, wiec przelicz z dp na piksele
-            params.setMargins(left, top, right, bottom);
-
-            tv1.setLayoutParams(params);
-        }*/
     }
 }

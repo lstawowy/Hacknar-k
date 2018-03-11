@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 
 public class Mission {
-    private String name;
+    public String name;
     boolean isDone;
     private String missionDescription;
     public ArrayList<MissionTask> tasks = new ArrayList<>();
@@ -25,12 +25,13 @@ public class Mission {
                 //        50.053151, 19.933751, MissionTask.TaskType.SEARCH));
                 //this.tasks.add(new MissionTask("Odnajdź posąg",
                 //        50.053030,19.933586, MissionTask.TaskType.SEARCH));
-
+                break;
             case 2:
                 this.name = "Legendarny skarb";
                 this.missionDescription = "Odkryj legendarny skarb";
                 this.tasks.add(new MissionTask("Idź do pałacu Krzysztofory",
                         50.062920,19.936729, MissionTask.TaskType.SEARCH));
+                break;
 
         }
     }
