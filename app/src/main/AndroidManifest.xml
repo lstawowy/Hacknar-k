@@ -85,6 +85,16 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.admin.hacknark.MainActivity" />
         </activity>
+
+        <activity
+            android:name=".ModesActivity"
+            android:label="ModesActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.admin.hacknark.ModesActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -225,6 +225,9 @@ public class MainActivity extends AppCompatActivity {
         } else if (button_text.equals("Map")) {
             Intent jump = new Intent(this, Map.class);
             startActivity(jump);
+        } else if(button_text.equals("Start")){
+            Intent jump = new Intent(this, ModesActivity.class);
+            startActivity(jump);
         }
     }
 
