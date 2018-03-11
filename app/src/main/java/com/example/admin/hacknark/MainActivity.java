@@ -182,13 +182,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createPUT(View view) throws IOException, JSONException {
-        String mapURL = "https://inform.release.commandcentral.com/#/";
-        Uri webaddress = Uri.parse(mapURL);
 
-        Intent gotoMaps = new Intent(Intent.ACTION_VIEW, webaddress);
-        if (gotoMaps.resolveActivity(getPackageManager()) != null){
-            startActivity(gotoMaps);
-        }
 
         //Dodawanie punktow na mapie
         /*PUTThread thread = new PUTThread();
@@ -227,6 +221,9 @@ public class MainActivity extends AppCompatActivity {
 
         } else if (button_text.equals("Ranking")) {
             Intent jump = new Intent(this, Ranking.class);
+            startActivity(jump);
+        } else if (button_text.equals("Map")) {
+            Intent jump = new Intent(this, Map.class);
             startActivity(jump);
         }
     }
