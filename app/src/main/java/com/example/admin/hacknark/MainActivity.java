@@ -228,5 +228,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
+    public void JumpToSettings(View View) {
+        Intent jump = new Intent(this, SettingsActivity.class);
+        startActivity(jump);
+    }
 }

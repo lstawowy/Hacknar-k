@@ -33,26 +33,38 @@
         android:id="@+id/button5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="22dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginStart="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="22dp"
-        android:text="Menu"
-        app:layout_constraintBottom_toTopOf="@+id/webview"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar3"
-        app:layout_constraintVertical_bias="1.0" />
+        android:onClick="JumpToMain"
+        android:text="Main"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton5"
+        app:layout_constraintStart_toEndOf="@+id/button7"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
-        android:layout_width="0dp"
+        android:id="@+id/imageButton5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="22dp"
-        app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintHorizontal_bias="0.526"
-        app:layout_constraintStart_toStartOf="parent"
+        android:onClick="JumpToSettings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_revert" />
+        app:srcCompat="@android:drawable/ic_menu_manage" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="22dp"
+        android:onClick="JumpToProfil"
+        android:text="Profil"
+        app:layout_constraintEnd_toStartOf="@+id/button5"
+        app:layout_constraintStart_toEndOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent" />
 </android.support.constraint.ConstraintLayout>

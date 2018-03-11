@@ -29,6 +29,24 @@ public class Map extends AppCompatActivity {
         myWebView.loadUrl("https://inform.release.commandcentral.com/#/");
     }
 
+    public void JumpToSettings(View View) {
+        Intent jump = new Intent(this, SettingsActivity.class);
+        startActivity(jump);
+    }
+
+    public void JumpToMain(View View) {
+        Intent jump = new Intent(this, MainActivity.class);
+        startActivity(jump);
+    }
+
+    public void JumpToProfil(View View) {
+        Intent jump = new Intent(this, Profile.class);
+        startActivity(jump);
+    }
+
+
+
+
     public void refreshPUT(View view) throws IOException {
         /*        String mapURL = "https://inform.release.commandcentral.com/#/";
         Uri webaddress = Uri.parse(mapURL);
