@@ -34,6 +34,7 @@ public class Mission {
                 break;
 
         }
+        GameMode.NameToObjectMission.put(this.name,this);
     }
 
 /*      Oblicza dystanse po punktach

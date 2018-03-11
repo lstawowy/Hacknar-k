@@ -1,6 +1,6 @@
 package com.example.admin.hacknark;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by usuryjskij on 10.03.18.
@@ -11,6 +11,7 @@ public class GameMode {
     public String name;
     public String modeDescription;
     public boolean tasksChronologyOn;  // odblokowywanie kolejnych misji
+    public static java.util.Map<String,Mission> NameToObjectMission = new HashMap<String,Mission>();
 
     //If exists
     GameMode(int a){
