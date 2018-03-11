@@ -12,12 +12,13 @@
         android:layout_width="255dp"
         android:layout_height="78dp"
         android:allowUndo="false"
+        android:fontFamily="sans-serif"
         android:text="Witaj dzielny wojowniku!"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textStyle="bold"
+        tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="65dp"
-        tools:layout_editor_absoluteY="25dp"
-        tools:ignore="MissingConstraints" />
+        tools:layout_editor_absoluteY="25dp" />
 
     <Button
         android:id="@+id/button"
@@ -53,6 +54,7 @@
         android:layout_marginTop="15dp"
         android:onClick="JumpTo"
         android:text="Ranking"
+        android:background="@drawable/button_tlo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button2"
         tools:ignore="MissingConstraints"
@@ -89,8 +91,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="120dp"
         android:layout_marginTop="16dp"
-        android:onClick="JumpTo"
-        android:text="Map"
+        android:onClick="createPUT"
+        android:text="@string/Map_button"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button3"
         android:layout_marginLeft="120dp" />
