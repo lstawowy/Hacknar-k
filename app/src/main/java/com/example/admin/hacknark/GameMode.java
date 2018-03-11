@@ -19,11 +19,22 @@ public class GameMode {
             case 1:
                 Mission jeden = new Mission(1);
                 Mission dwa = new Mission(2);
+                Mission trzy = new Mission(3);
+                Mission cztery = new Mission(4);
+                Mission piec = new Mission(5);
+                Mission szesc = new Mission(6);
+                Mission siedem = new Mission(7);
+                Mission osiem = new Mission(8);
                 this.missions.add(jeden);
                 this.missions.add(dwa);
+                this.missions.add(trzy);
+                this.missions.add(cztery);
+                this.missions.add(piec);
+                this.missions.add(szesc);
+                this.missions.add(siedem);
+                this.missions.add(osiem);
                 this.name = "Legendarny";
-                this.modeDescription = "Tryb skierowany dla najmłodszych graczy. Odkryj niezwykły świat krakowskich" +
-                        "legend i daj się porwać przygodzie.";
+                this.modeDescription = "Odkryj niezwykły świat krakowskich legend. Poznaj miejsca owiane historią i tajemnicą. Wyrusz w podróż pełną magii kryjącej się w Krakowie!";
                 GameData.NameToObjectMode.put(this.name,this);
         }
     }
