@@ -182,7 +182,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void createPUT(View view) throws IOException, JSONException {
-
+        Intent jump = new Intent(this, Map.class);
+        startActivity(jump);
 
         //Dodawanie punktow na mapie
         /*PUTThread thread = new PUTThread();
