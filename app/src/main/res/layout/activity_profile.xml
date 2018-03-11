@@ -68,7 +68,7 @@
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="348dp"
         android:layout_height="15dp"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/button_tlo_profil"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="93dp" />
