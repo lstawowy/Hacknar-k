@@ -38,10 +38,12 @@ public class Mission {
                 this.name = "Dwie wieże";
                 this.missionDescription = "Legenda o dwóch braciach, słynnych murarzach, którzy pod koniec XIII wieku zaczęli budowę. Kiedy starszy brat zorientował się, że jego wieża jest znacznie wyższa, nie chcąc dać się wyprzedzić - zamordował brata. Jednak wyrzuty sumienia nie dawały mu spokoju, dlatego wbił nóż w swoje serce, a potem rzucił się ze szczytu wieży. Ów skrwawiony braterską krwią nóż do dziś wisi, przykuty łańcuchem w Sukiennicach. ";
                 this.tasks.add(new MissionTask("znajdź wieże budowane przez braci z opowieści",50.061628, 19.938997,MissionTask.TaskType.SEARCH));
-                this.tasks.add(new MissionTask(""))
-
+                this.tasks.add(new MissionTask("znajdź nóż w bramie", 50.061628, 19.938997, MissionTask.TaskType.SEARCH));
                 break;
             case 4:
+                this.name = "o Wandzie";
+                this.missionDescription = "Księżniczka Wanda, która nie chciała poślubić germańskiego księcia Rydygiera, by nie oddawać kraju pod obce panowanie. Książę zagroził, że najedzie ziemie Wandy, ale płomienna mowa wygłoszona przez księżniczkę sprawiła, że wróg odstąpił od planu zbrojnego. Upokorzony książę odebrał sobie życie. Wanda była jednak smutna, bo wiedziała, że musi złożyć bogom ofiarę dziękczynną.";
+                this.tasks.add(new MissionTask("znajdź miejsce upamiętniające księżniczkę Wandę", 50.070300, 20.068052,MissionTask.TaskType.SEARCH))
 
                 break;
             case 5:
