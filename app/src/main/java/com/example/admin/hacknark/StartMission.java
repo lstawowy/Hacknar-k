@@ -1,5 +1,6 @@
 package com.example.admin.hacknark;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
@@ -24,6 +25,8 @@ public class StartMission extends AppCompatActivity {
     }
 
     public void ShowMission(){
+        Intent jump = new Intent(this, MissionRunning.class);
+        startActivity(jump);
 
     }
 }

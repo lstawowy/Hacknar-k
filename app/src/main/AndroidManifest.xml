@@ -116,6 +116,16 @@
                 android:value="com.example.admin.hacknark.StartMission" />
         </activity>
 
+        <activity
+            android:name=".MissionRunning"
+            android:label="MissionRunning"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.admin.hacknark.MissionRunning" />
+        </activity>
+
         <activity android:name=".Developer"></activity>
 
     </application>
