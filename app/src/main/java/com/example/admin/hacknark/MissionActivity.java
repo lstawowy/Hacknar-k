@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 
 /**
@@ -18,7 +16,6 @@ public class MissionActivity extends AppCompatActivity {
         @Override
         public void onClick(View view) {
             String button_text;
-            //String button_id;
             button_text = ((Button) view).getText().toString();
             ModesActivity.chosenMission = button_text;
 
@@ -39,12 +36,7 @@ public class MissionActivity extends AppCompatActivity {
             b.setWidth(500);
             b.setHeight(200);
             b.setY(100+ilosc*220);
-            //b.setTop(800);
-            //b.setLeft(500);
-            //b.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT));
-            //b.layout(500,400,10,10);
             b.setOnClickListener(l);
-            //b.layout(500,80+GameData.NameToObjectMode.get(ModesActivity.chosenMode).missions.indexOf(m)*95,10,10);
             rLayout.addView(b);
             ilosc++;
         }
