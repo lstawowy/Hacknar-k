@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
     tools:context="com.example.admin.hacknark.Map"
     tools:layout_editor_absoluteY="81dp">
 
@@ -46,25 +47,29 @@
         android:id="@+id/imageButton5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="22dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="10dp"
         android:layout_marginTop="22dp"
         android:onClick="JumpToSettings"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button5"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_manage" />
+        app:srcCompat="@android:drawable/ic_menu_manage"
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="10dp" />
 
     <Button
         android:id="@+id/button7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="10dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="22dp"
         android:onClick="JumpToProfil"
         android:text="Profil"
         app:layout_constraintEnd_toStartOf="@+id/button5"
-        app:layout_constraintStart_toEndOf="@+id/toolbar3"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="@+id/toolbar3"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="8dp" />
 </android.support.constraint.ConstraintLayout>
