@@ -44,4 +44,10 @@ public class SettingsActivity extends AppCompatActivity {
         Intent jump = new Intent(this, Profile.class);
         startActivity(jump);
     }
+
+    public void goToDevelop(View View) {
+        Intent jump = new Intent(this, Developer.class);
+        startActivity(jump);
+    }
+
 }
