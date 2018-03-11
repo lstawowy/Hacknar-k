@@ -8,9 +8,9 @@ import java.util.ArrayList;
 
 public class GameMode {
     public ArrayList<Mission> missions = new ArrayList<>();
-    private String name;
-    private String modeDescription;
-    private boolean tasksChronologyOn;  // odblokowywanie kolejnych misji
+    public String name;
+    public String modeDescription;
+    public boolean tasksChronologyOn;  // odblokowywanie kolejnych misji
 
     //If exists
     GameMode(int a){
