@@ -11,7 +11,7 @@ public class GameMode {
     public String name;
     public String modeDescription;
     public boolean tasksChronologyOn;  // odblokowywanie kolejnych misji
-    public static java.util.Map<String,Mission> NameToObjectMission = new HashMap<String,Mission>();
+    public java.util.Map<String,Mission> NameToObjectMission = new HashMap<String,Mission>();
 
     //If exists
     GameMode(int a){
@@ -33,6 +33,9 @@ public class GameMode {
                 this.missions.add(szesc);
                 this.missions.add(siedem);
                 this.missions.add(osiem);
+                for(Mission m:missions){
+                    this.NameToObjectMission.put(m.name,m);
+                }
                 this.name = "Legendarny";
                 this.modeDescription = "Odkryj niezwykły świat krakowskich legend. Poznaj miejsca owiane historią i tajemnicą. Wyrusz w podróż pełną magii kryjącej się w Krakowie!";
                 GameData.NameToObjectMode.put(this.name,this);

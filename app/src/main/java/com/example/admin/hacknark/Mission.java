@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Mission {
     public String name;
     boolean isDone;
-    private String missionDescription;
+    public String missionDescription;
     public ArrayList<MissionTask> tasks = new ArrayList<>();
 
     Mission(int a){
@@ -66,7 +66,6 @@ public class Mission {
                 break;
 
         }
-        GameMode.NameToObjectMission.put(this.name,this);
     }
 
 /*      Oblicza dystanse po punktach
