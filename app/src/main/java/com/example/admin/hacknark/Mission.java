@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class Mission {
     public String name;
     boolean isDone;
-    private String missionDescription;
+    public String missionDescription;
     public ArrayList<MissionTask> tasks = new ArrayList<>();
 
     Mission(int a){
@@ -43,7 +43,7 @@ public class Mission {
             case 4:
                 this.name = "o Wandzie";
                 this.missionDescription = "Księżniczka Wanda, która nie chciała poślubić germańskiego księcia Rydygiera, by nie oddawać kraju pod obce panowanie. Książę zagroził, że najedzie ziemie Wandy, ale płomienna mowa wygłoszona przez księżniczkę sprawiła, że wróg odstąpił od planu zbrojnego. Upokorzony książę odebrał sobie życie. Wanda była jednak smutna, bo wiedziała, że musi złożyć bogom ofiarę dziękczynną.";
-                this.tasks.add(new MissionTask("znajdź miejsce upamiętniające księżniczkę Wandę", 50.070300, 20.068052,MissionTask.TaskType.SEARCH))
+                this.tasks.add(new MissionTask("znajdź miejsce upamiętniające księżniczkę Wandę", 50.070300, 20.068052,MissionTask.TaskType.SEARCH));
 
                 break;
             case 5:
@@ -60,7 +60,6 @@ public class Mission {
                 break;
 
         }
-        GameMode.NameToObjectMission.put(this.name,this);
     }
 
 /*      Oblicza dystanse po punktach
