@@ -43,17 +43,23 @@ public class Mission {
             case 4:
                 this.name = "o Wandzie";
                 this.missionDescription = "Księżniczka Wanda, która nie chciała poślubić germańskiego księcia Rydygiera, by nie oddawać kraju pod obce panowanie. Książę zagroził, że najedzie ziemie Wandy, ale płomienna mowa wygłoszona przez księżniczkę sprawiła, że wróg odstąpił od planu zbrojnego. Upokorzony książę odebrał sobie życie. Wanda była jednak smutna, bo wiedziała, że musi złożyć bogom ofiarę dziękczynną.";
-                this.tasks.add(new MissionTask("znajdź miejsce upamiętniające księżniczkę Wandę", 50.070300, 20.068052,MissionTask.TaskType.SEARCH))
+                this.tasks.add(new MissionTask("znajdź miejsce upamiętniające księżniczkę Wandę", 50.070300, 20.068052,MissionTask.TaskType.SEARCH));
 
                 break;
             case 5:
-
+                this.name = "Zaczarowane gołębie";
+                this.missionDescription = " Gdy na książęcym tronie zasiadł Henryk IV Prawy, zapragnął zjednoczyć wszystkie ziemie księstwa, ale nie miał pieniędzy. Wtedy wróżka zamieniła książęcą drużynę w gołębie. Obsiadły one kościół Mariacki i zaczęły wydziobywać kamyki, które spadając na ziemię zamieniały się w złote monety. Książę ze złotem wyprawił się do Rzymu po poparcie papieża. Ale po drodze ucztował, bawił się i stracił pieniądze. Nigdy już nie wrócił do Krakowa, a jego drużyna pozostała zaklęta. Gołębie z krakowskiego Rynku Głównego nie boją się ludzi i fruwają nad ich głowami. Czasem przysiadają na ramieniu, licząc, że to powracający książę, który zdejmie z nich czar. ";
+                this.tasks.add(new MissionTask("przespaceruj się dookoła rynku karmiąc gołębie", 50.062654, 19.936929, MissionTask.TaskType.SEARCH));
                 break;
             case 6:
-
+                this.name = "Żółta ciżemka";
+                this.missionDescription = " W 1867 r., w czasie prac konserwatorskich w kościele Mariackim, za ołtarzem Wita Stwosza odkryto zakurzony żółty trzewik. Jak się tam znalazł? Legenda głosi, że należał do Wawrzka, wiejskiego chłopca, który gdy tylko kawałek drewna znalazł, zabierał się za rzeźbienie. Raz tak zapomniał o Bożym świecie, że nie zauważył, jak krowa, której pilnował, zniszczyła zboże na polu proboszcza. Bał się Wawrzek do domu wrócić i uciekł w las. Tam zgubił drogę, szedł, szedł, aż znalazł się w Krakowie. Przygarnął go kanonik, który szybko poznał się na talencie chłopca i oddał go na naukę do mistrza Wita Stwosza. Talent Wawrzka docenił sam król Kazimierz Jagiellończyk i podarował chłopcu wymarzone żółte trzewiczki. Niestety, chłopiec nie cieszył się nimi zbyt długo. Chciał je włożyć na uroczystość odsłonięcia ołtarza, ale malując jedną z jego rzeźb zgubił jeden bucik, który spadł za ołtarz i przeleżał tam prawie 400 lat. A biedny Wawrzek znowu musiał chodzić boso.";
+                this.tasks.add(new MissionTask("odnajdź ołtarz, który pomagał tworzyć Wawrzynek", 50.0616411,19.9380857, MissionTask.TaskType.SEARCH));
                 break;
             case 7:
-
+                this.name = "Żydowskie Wesele";
+                this.missionDescription = "Jednym z najczęściej odwiedzanych miejsc Kazimierza jest plac na ul. Szerokiej. Pewnego dnia bogaty Żyd, mimo sprzeciwu rabina z pobliskiej synagogi Remuh, urządził w tym miejscu wesele córki. Zabawa trwała do późnego wieczora w piątek, kiedy już nastał szabas i czas modlitwy. Weselników spotkała za to sroga kara: wszyscy umarli tego samego wieczora. Od tej pory nigdy nie urządzano już w piątek żydowskich zaślubin, a po dziś dzień można nieopodal synagogi usłyszeć szepty i jęki przeklętych weselników. Tylko liczni goście okolicznych knajpek zdają się ich nie słyszeć... do czasu!";
+                this.tasks.add(new MissionTask("Zjedz obiad w restauracji na Kazimierzu", 50.0616411,19.9380857, MissionTask.TaskType.SEARCH));
                 break;
             case 8:
 
